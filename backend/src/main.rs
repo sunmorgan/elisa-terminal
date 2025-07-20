@@ -21,4 +21,11 @@ struct AppState {
 
 async fn main() {
     tracing_subscriber::fmt::init();
+
+    let state = Arc::new(AppState {
+        alpha_client: alphavantage::AvClient::new(),
+        quote_cache: cache::QuoteCache::new()
+    })
+
+
 }
