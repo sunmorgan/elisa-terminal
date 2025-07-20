@@ -1,8 +1,6 @@
-use axum::{
-    routing::get
-    Router,
-};
+use axum::{routing::get, Router};
 
-async fn main(){
+mod alphavantage;
+mod models;
 
-}
+async fn main() {}
