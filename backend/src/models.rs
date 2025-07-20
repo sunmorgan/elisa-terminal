@@ -12,7 +12,7 @@ pub struct AvResponse {
     pub error: Option<String>,
 }
 
-pub struct response {
+pub struct Response {
     pub symbol: String,
     pub price: f64,
     pub change: f64,
