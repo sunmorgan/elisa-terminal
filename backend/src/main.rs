@@ -14,6 +14,11 @@ use models::Response;
 use std::{net::SocketAddr, sync::Arc};
 use tracing_subscriber;
 
+struct AppState {
+    alpha_client: alphavantage::AvClient,
+    quote_cache: cache::QuoteCache,
+}
+
 async fn main() {
     tracing_subscriber::fmt::init();
 }
