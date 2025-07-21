@@ -4,11 +4,8 @@ mod alphavantage;
 mod cache;
 mod models;
 
-use axum:: {
-   extract::Path,
-   routing::get,
-   Router,
-}
+use axum::{extract::Path, routing::get, Router};
+
 use cache::QuoteCache;
 use models::Response;
 use std::{net::SocketAddr, sync::Arc};
@@ -24,8 +21,6 @@ async fn main() {
 
     let state = Arc::new(AppState {
         alpha_client: alphavantage::AvClient::new(),
-        quote_cache: cache::QuoteCache::new()
-    })
-
-
+        quote_cache: cache::QuoteCache::new(),
+    });
 }
